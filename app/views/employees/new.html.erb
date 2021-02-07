@@ -42,9 +42,8 @@
   </div>
 
   <div class="row">
-    <div class="mx-auto">
-      <%= form.submit "Add Employee" %>
-    </div>
+    <%= link_to "Back",  :back, class: 'mx-auto' %>
+    <%= form.submit "Add Employee", class: 'mx-auto' %>
   </div>
 
   <% end %>
