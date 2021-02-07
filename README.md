@@ -1,24 +1,11 @@
-# README
+# Employee Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Accessor has facility to...
 
-Things you may want to cover:
+* View all employees
 
-* Ruby version
+* View specified employee
 
-* System dependencies
+* Add employee
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+On adding employee, data to be collected are validated in model.
