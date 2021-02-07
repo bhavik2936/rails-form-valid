@@ -4,24 +4,43 @@
 </div>
 
   <%= form_with model: @employee do |form| %>
-  
-  <div class="row my-3">
-    <div class="col-5 border rounded p-2 my-1 mx-auto">
-      <h3>Personal Information</h3>
-      <div>
-        <%= form.label :name %>
-        <%= form.text_field :name %>
+
+  <div class="row my-3 mx-1 mx-md-0">
+
+    <div class="col-md-5 border rounded p-2 my-1 mx-auto">
+      <h3 class="col">Personal Information</h3>
+      <div class="col row my-1">
+        <%= form.label :name, class: 'col-md-3 col-4' %>
+        <%= form.text_field :name, class: 'col-md-9 col-8' %>
+      </div>
+      <div class="col row my-1">
+        <%= form.label :email, class: 'col-md-3 col-4' %>
+        <%= form.email_field :email, class: 'col-md-9 col-8' %>
+      </div>
+      <div class="col row my-1">
+        <%= form.label :dob, value: "Date of Birth", class: 'col-md-3 col-4' %>
+        <%= form.date_field :dob, class: 'col-md-9 col-8' %>
+      </div>
+      <div class="col row my-1">
+        <%= form.label :mobile, value: "Mobile No.", class: 'col-md-3 col-4' %>
+        <%= form.telephone_field :dob, class: 'col-md-9 col-8' %>
       </div>
     </div>
-    <div class="col-5 border rounded p-2 my-1 mx-auto">
-      <h3>Professional Information</h3>
-      <div>
-        <%= form.label :address %>
-        <%= form.text_area :address, class: 'rounded' %>
+
+    <div class="col-md-5 border rounded p-2 my-1 mx-auto">
+      <h3 class="col">Professional Information</h3>
+      <div class="col row my-1">
+        <%= form.label :designation, class: 'col-md-3 col-4' %>
+        <%= form.text_field :designation, class: 'col-md-9 col-8' %>
+      </div>
+      <div class="col row my-1">
+        <%= form.label :salary, class: 'col-md-3 col-4' %>
+        <%= form.number_field :salary, in: 10_000..2_00_000, class: 'col-md-9 col-8' %>
       </div>
     </div>
       
   </div>
+
   <div class="row">
     <div class="mx-auto">
       <%= form.submit "Add Employee" %>
