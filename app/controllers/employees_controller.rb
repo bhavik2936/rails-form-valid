@@ -3,6 +3,10 @@ class EmployeesController < ApplicationController
     @employee = Employee.all
   end
 
+  def show
+    @employee = Employee.find(params[:id])
+  end
+
   def new
 
   end
