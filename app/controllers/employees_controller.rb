@@ -15,7 +15,7 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
 
     if @employee.save
-      redirect_to @employee
+      redirect_to employees_path
     else
       render :new
     end

@@ -1,10 +1,11 @@
-<h1>Employees</h1>
+<div class="container"> 
+  <h1>Employees (<%= link_to "+", new_employee_path %>)</h1>
 
-<ul>
-  <% @employee.each do |employee| %>
-    <li>
-      <%= employee.name %>
-      (<%= employee.address %>)
-    </li>
-  <% end %>
-</ul>
+  <div class="col">
+    <% @employee.each do |employee| %>
+    <div class="row">
+      <li> <%= employee.name %> (<%= employee.address %>) </li>
+    </div>
+    <% end %>
+  </div>
+</div>
