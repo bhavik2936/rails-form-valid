@@ -1,6 +1,5 @@
 class Employee < ApplicationRecord
-  before_validation :trim_data
-  after_validation :normalize_name, on: [ :create, :update ]
+  before_save :trim_data, :normalize_name
   after_save :send_welcome_email
   before_destroy :send_goodbye_email
   after_destroy :remove_user_data
