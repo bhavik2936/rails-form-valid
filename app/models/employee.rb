@@ -41,5 +41,5 @@ class Employee < ApplicationRecord
     Rails.logger.info "\'Someone Viewed Your Profile\' email sent to #{email}"
   end
 
-  private :trim_data, :normalize_name
+  private :trim_data, :normalize_name, :send_welcome_email, :remove_user_data, :view_profile_email
 end

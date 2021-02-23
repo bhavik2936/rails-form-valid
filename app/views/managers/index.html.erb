@@ -1,0 +1,11 @@
+<div class="container"> 
+  <h1>Managers (<%= link_to "+", new_manager_path %>)</h1>
+
+  <div class="col">
+    <% @manager.each do |manager| %>
+    <div class="row">
+      <li> <%= link_to manager.name, manager %> </li>
+    </div>
+    <% end %>
+  </div>
+</div>
