@@ -5,6 +5,8 @@
 
   <%= form_with model: @employee do |form| %>
 
+  <%= @employee.errors.messages %>
+
   <div class="row my-3 mx-1 mx-md-0">
 
     <div class="col-md-5 border rounded p-2 my-1 mx-auto">
@@ -36,6 +38,10 @@
       <div class="col row my-1">
         <%= form.label :salary, class: 'col-md-3 col-4' %>
         <%= form.number_field :salary, in: 10_000..2_00_000, class: 'col-md-9 col-8' %>
+      </div>
+      <div class="col row my-1">
+        <%= form.label :manager_id, class: 'col-md-3 col-4' %>
+        <%= form.select :manager_id, Manager.all.pluck(:name, :id), {prompt: 'select'}, {class: 'col-md-9 col-8'} %>
       </div>
     </div>
       
