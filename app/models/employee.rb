@@ -1,4 +1,6 @@
 class Employee < ApplicationRecord
+  belongs_to :manager
+
   before_save :trim_data, :normalize_name
   after_save :send_welcome_email
   before_destroy :send_goodbye_email
