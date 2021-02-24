@@ -1,0 +1,19 @@
+<%= form_with model: @manager do |form| %>
+
+<div class="row my-3 mx-1 mx-md-0">
+
+  <div class="col-md-5 border rounded p-2 my-1 mx-auto">
+    <h3 class="col text-center my-3">Personal Information</h3>
+    <div class="col row my-1">
+      <%= form.label :name, class: 'col-md-3 col-4' %>
+      <%= form.text_field :name, class: 'col-md-9 col-8' %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <%= link_to "Back",  :back, class: 'mx-auto' %>
+  <%= form.submit class: 'mx-auto' %>
+</div>
+
+<% end %>

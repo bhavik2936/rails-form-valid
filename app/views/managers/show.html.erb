@@ -20,6 +20,7 @@
 
   <div class="row">
     <%= link_to "Back", managers_path, class: 'mx-auto' %>
+    <%= link_to "Modify", edit_manager_path, class: 'mx-auto' %>
     <%= link_to "Delete", manager_path, method: :delete, data: { confirm: "Are you sure want to delete manager \"#{ @manager.name }\"?" }, class: 'mx-auto' %>
   </div>
 </div>
