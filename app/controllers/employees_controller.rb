@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: [ :show, :edit, :update, :destory ]
+  before_action :set_employee, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @employee = Employee.all
@@ -34,7 +34,7 @@ class EmployeesController < ApplicationController
   end
 
   def destroy
-    if @employee.delete
+    if @employee.destroy
       redirect_to employees_path
     else
       render :show

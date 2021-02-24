@@ -1,5 +1,5 @@
 class ManagersController < ApplicationController
-  before_action :set_manager, only: [ :show, :edit, :update, :destory ]
+  before_action :set_manager, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @manager = Manager.all
@@ -34,7 +34,7 @@ class ManagersController < ApplicationController
   end
 
   def destroy
-    if @manager.delete
+    if @manager.destroy
       redirect_to managers_path
     else
       render :new
