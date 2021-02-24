@@ -21,5 +21,6 @@
 
   <div class="row">
     <%= link_to "Back", :back, class: 'mx-auto' %>
+    <%= link_to "Delete", employee_path, method: :delete, data: { confirm: "Are you sure want to delete employee \"#{ @employee.name }\"?" }, class: 'mx-auto' %>
   </div>
 </div>
