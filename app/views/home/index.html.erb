@@ -1,2 +1,24 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div>
+  <div class="col text-center my-3">
+    <h1>Welcome to Employee-Management</h1>
+  </div>
+  <div class="my-4">
+    <div class="row">
+      <div id="employee_section" class="border rounded col-md-5 col-6 mx-auto py-5" role="button">
+        <h2>Manage Employee</h2>
+      </div>
+      <div id="manager_section" class="border rounded col-md-5 col-6 mx-auto py-5" role="button">
+        <h2>Manage Manager</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$('#employee_section').click(function() {
+  location.href = '<%= employees_url %>';
+});
+$('#manager_section').click(function() {
+  location.href = '<%= managers_url %>';
+});
+</script>
