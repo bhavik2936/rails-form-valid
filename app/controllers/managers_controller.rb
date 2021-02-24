@@ -21,6 +21,16 @@ class ManagersController < ApplicationController
     end
   end
 
+  def destroy
+    @manager = Manager.find(params[:id])
+
+    if @manager.delete
+      redirect_to managers_path
+    else
+      render :new
+    end
+  end
+
   private
     def manager_params
       params.require(:manager).permit(:name)
