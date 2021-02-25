@@ -1,5 +1,5 @@
 class Manager < ApplicationRecord
-  has_many :employee
+  has_many :employee, dependent: :destroy
 
   before_save :trim_data, :normalize_name
 
