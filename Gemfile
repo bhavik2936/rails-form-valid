@@ -53,6 +53,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
   gem 'simplecov', require: false
   gem 'database_cleaner'
 end
