@@ -34,11 +34,8 @@ class ManagersController < ApplicationController
   end
 
   def destroy
-    if @manager.destroy
-      redirect_to managers_path
-    else
-      render :new
-    end
+    @manager.destroy
+    redirect_to managers_path
   end
 
   private
