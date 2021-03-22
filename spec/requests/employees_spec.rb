@@ -29,8 +29,13 @@ RSpec.describe "Employees", type: :request do
   
   describe "POST /create" do
     context "with valid params" do
+      let :employee do
+        post employees_path, params: {
+          employee: attributes_for(:employee, manager_id: create(:manager).id)
+        }
+      end
+
       it "inserts employee and redirects to page" do
-        post employees_path, :params => { employee: employee.attributes }
         expect { employee }.to change(Employee, :count).by(1)
         expect(response).to be_redirect
       end
